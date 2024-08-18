@@ -1,37 +1,37 @@
 import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
-import PinterestIcon from '@mui/icons-material/Pinterest';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import { Avatar } from '@mui/material';
 import {Link} from 'react-router-dom'
 
 function NavBar() {
   return (
-    <div class='fixed flex justify-between items-center p-2 w-full bg-white/60 z-[10]'>
+    <div id='home' class='fixed top-0 flex justify-between items-center p-2 w-full bg-white/60 z-[10]'>
 
         <div className=''>
-          <FacebookIcon/>
-          <PinterestIcon/>
-          <EmailIcon/></div>
+          <a href='https://www.facebook.com/kamachi.nathan.73'><FacebookIcon/></a>
+          <a href='https://www.instagram.com/kamachivideos/'><InstagramIcon/></a>
+          <a href='mailto:kamatchistd92@gmail.com'><EmailIcon/></a>
+        </div>
 
         <div className='flex w-1/4 justify-between font-bold'>
-
           <div>
-            <span>Home</span>
+            <Link to={'/'}><span>Home</span></Link>
           </div>
 
           <div>
-            <span>About</span>
-          </div>
-
-
-          <div>
-            <span>Contact</span>
+            <a href="#about_sec">About</a>
           </div>
 
 
           <div>
-            <Link to={'/login'}><span>Logout</span></Link>
+          <a href="#contact">Contact</a>
+          </div>
+
+
+          <div>
+            <Link to={'/login'}><span>Login</span></Link>
           </div>
         </div>
 
